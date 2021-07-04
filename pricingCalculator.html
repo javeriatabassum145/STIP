@@ -1,0 +1,747 @@
+<!-- Pricing Calculator Section  -->
+<div class="pricing-div mt-5 p-3 p-sm-5">
+    <div class="conatiner">
+        <!-- Main heading of Pricing  -->
+        <header class="section-header">
+            <h2 class="text-light">pricing</h2>
+            <!-- Heading of Pricing Calculator  -->
+            <p class="text-light" data-aos="zoom-in" data-aos-delay="100">Pricing Calculator</p>
+        </header>
+    </div>
+
+    <!-- Pricing Table  -->
+    <div class="pricing-table container-fluid pt-3" data-aos="fade-in" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-12 px-md-5">
+                <div class="slider-container">
+
+                    <!-- Headings of log types, Nodes, EPS, GB/day  -->
+                    <div class="row bold faint-border ">
+                        <div class="col-6 col-md-8">
+                            <div class="row slider-header">
+                                <div class="col-7 col-md-8"><strong>Log Types</strong></div>
+                                <div class="d-none d-sm-block col-5 col-md-4"><strong>Nodes
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-header">
+                                <div class="col-6"><strong>EPS
+                                    </strong>
+                                </div>
+                                <div class="col-6"><strong>GB/day</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Row 1  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Windows Server</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <!-- rangeSlide() is a method created in JS for implementing the logic  -->
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row1"
+                                                class="range" min="0" max="100" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row1" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="100"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row1");
+                                                var maxQuantity = 100;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 100.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row1">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row1">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 2  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row2"
+                                                class="range" min="0" max="50" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input id="node_max_row2" type="number" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="50"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row2");
+                                                var maxQuantity = 50;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 50.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row2">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row2">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 3  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row3"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row3" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row3");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row3">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row3">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 4  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row4"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row4" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row4");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row4">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row4">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 5  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row5"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row5" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row5");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row5">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row5">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 6  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row6"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row6" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row6");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row6">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row6">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 7  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row7"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row7" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row7");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row7">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row7">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 8  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row8"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row8" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row8");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row8">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row8">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 9  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row9"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row9" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row9");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row9">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row9">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 10  -->
+                    <div class=" row align-items-center pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-4">
+                                    <div class="log-types">Network Firewalls</div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="range-slider">
+                                        <form>
+                                            <input type="range" name="amountRange" id="nodes_value_slider_row10"
+                                                class="range" min="0" max="20" value="0"
+                                                oninput="this.form.amountInput.value=this.value"
+                                                onChange="rangeSlide()" />
+                                            <input type="number" id="node_max_row10" class="ml-sm-5 nodes"
+                                                name="amountInput" min="0" max="20"
+                                                oninput="this.form.amountRange.value=this.value" placeholder="Nodes"
+                                                style="width: 100px;" onChange="rangeSlide()" />
+                                        </form>
+
+                                        <!-- Maximum node value Error alert display message JS code -->
+                                        <script>
+                                            function maxValue() {
+                                                var numbers = document.getElementById("node_max_row10");
+                                                var maxQuantity = 20;
+
+                                                numbers.addEventListener("input", function (e) {
+                                                    console.log(e);
+                                                    if (this.value > maxQuantity) {
+                                                        // Alert Message
+                                                        alert("You are trying to enter large number. Maximum node value is 20.");
+                                                        this.value = maxQuantity;
+                                                    }
+                                                })
+                                            };
+                                            window.onload = maxValue();
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-result">
+                                <div class="col-6">
+                                    <span id="EPS_value_row10">0.00</span>
+                                </div>
+                                <div class="col-6">
+                                    <span id="GB_value_row10">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row Answer  -->
+                    <div class="row bold mt-3 pt-4">
+                        <div class="col-6 col-md-8">
+                            <div class="row">
+                                <div class="col-5"><strong><strong>Total</strong></strong></div>
+                                <div class="col-3"></div>
+                                <div class="d-none d-lg-block col-4"><strong
+                                        class="epsgpd-result-text result-padding-left"
+                                        id="Node_value_row_answer">0.00</strong></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="row slider-footer">
+                                <div class="col-6">
+                                    <strong><span id="EPS_value_row_answer">0.00</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <strong><span id="GB_value_row_answer">0.00</span></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Storage  -->
+                    <div class="pricing-storage my-4 d-flex flex-column justify-content-center align-items-center">
+                        <div class="box-pricing">
+
+                            <div class="total-days range-slider p-3">
+                                <label for="amountInput"><strong>Total Days : </strong></label>
+                                <input id="nodes_value_days" type="number" class="days" name="amountInput" min="1"
+                                    max="365" oninput="this.form.amountRange.value=this.value" placeholder="Days"
+                                    onChange="rangeSlide()" style="width: 100px;" />
+                            </div>
+
+                            <div class="total-gb p-3">
+                                <label for="amountInput"><strong>Total GB : </strong></label>
+                                <strong><span id="Node_value_gb">0.00</span></strong>
+                                <span><strong>GB</strong> </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    function rangeSlide() {
+
+        // For Row 1
+        var nodes_value_slider_row1 = document.getElementById('nodes_value_slider_row1').value;
+        nodes_value_slider_row1 = parseFloat(nodes_value_slider_row1);
+        var finalvalue_row1 = parseFloat(nodes_value_slider_row1 + nodes_value_slider_row1);
+        document.getElementById('EPS_value_row1').innerHTML = finalvalue_row1;
+        document.getElementById('GB_value_row1').innerHTML = finalvalue_row1;
+
+        // For Row 2
+        var nodes_value_slider_row2 = document.getElementById('nodes_value_slider_row2').value;
+        nodes_value_slider_row2 = parseFloat(nodes_value_slider_row2);
+        var finalvalue_row2 = parseFloat(nodes_value_slider_row2 + nodes_value_slider_row2);
+        document.getElementById('EPS_value_row2').innerHTML = finalvalue_row2;
+        document.getElementById('GB_value_row2').innerHTML = finalvalue_row2;
+
+        // For Row 3
+        var nodes_value_slider_row3 = document.getElementById('nodes_value_slider_row3').value;
+        nodes_value_slider_row3 = parseFloat(nodes_value_slider_row3);
+        var finalvalue_row3 = parseFloat(nodes_value_slider_row3 + nodes_value_slider_row3);
+        document.getElementById('EPS_value_row3').innerHTML = finalvalue_row3;
+        document.getElementById('GB_value_row3').innerHTML = finalvalue_row3;
+
+        // For Row 4
+        var nodes_value_slider_row4 = document.getElementById('nodes_value_slider_row4').value;
+        nodes_value_slider_row4 = parseFloat(nodes_value_slider_row4);
+        var finalvalue_row4 = parseFloat(nodes_value_slider_row4 + nodes_value_slider_row4);
+        document.getElementById('EPS_value_row4').innerHTML = finalvalue_row4;
+        document.getElementById('GB_value_row4').innerHTML = finalvalue_row4;
+
+        // For Row 5
+        var nodes_value_slider_row5 = document.getElementById('nodes_value_slider_row5').value;
+        nodes_value_slider_row5 = parseFloat(nodes_value_slider_row5);
+        var finalvalue_row5 = parseFloat(nodes_value_slider_row5 + nodes_value_slider_row5);
+        document.getElementById('EPS_value_row5').innerHTML = finalvalue_row5;
+        document.getElementById('GB_value_row5').innerHTML = finalvalue_row5;
+
+        // For Row 6
+        var nodes_value_slider_row6 = document.getElementById('nodes_value_slider_row6').value;
+        nodes_value_slider_row6 = parseFloat(nodes_value_slider_row6);
+        var finalvalue_row6 = parseFloat(nodes_value_slider_row6 + nodes_value_slider_row6);
+        document.getElementById('EPS_value_row6').innerHTML = finalvalue_row6;
+        document.getElementById('GB_value_row6').innerHTML = finalvalue_row6;
+
+        // For Row 7
+        var nodes_value_slider_row7 = document.getElementById('nodes_value_slider_row7').value;
+        nodes_value_slider_row7 = parseFloat(nodes_value_slider_row7);
+        var finalvalue_row7 = parseFloat(nodes_value_slider_row7 + nodes_value_slider_row7);
+        document.getElementById('EPS_value_row7').innerHTML = finalvalue_row7;
+        document.getElementById('GB_value_row7').innerHTML = finalvalue_row7;
+
+        // For Row 8
+        var nodes_value_slider_row8 = document.getElementById('nodes_value_slider_row8').value;
+        nodes_value_slider_row8 = parseFloat(nodes_value_slider_row8);
+        var finalvalue_row8 = parseFloat(nodes_value_slider_row8 + nodes_value_slider_row8);
+        document.getElementById('EPS_value_row8').innerHTML = finalvalue_row8;
+        document.getElementById('GB_value_row8').innerHTML = finalvalue_row8;
+
+        // For Row 9
+        var nodes_value_slider_row9 = document.getElementById('nodes_value_slider_row9').value;
+        nodes_value_slider_row9 = parseFloat(nodes_value_slider_row9);
+        var finalvalue_row9 = parseFloat(nodes_value_slider_row9 + nodes_value_slider_row9);
+        document.getElementById('EPS_value_row9').innerHTML = finalvalue_row9;
+        document.getElementById('GB_value_row9').innerHTML = finalvalue_row9;
+
+        // For Row 10
+        var nodes_value_slider_row10 = document.getElementById('nodes_value_slider_row10').value;
+        nodes_value_slider_row10 = parseFloat(nodes_value_slider_row10);
+        var finalvalue_row10 = parseFloat(nodes_value_slider_row10 + nodes_value_slider_row10);
+        document.getElementById('EPS_value_row10').innerHTML = finalvalue_row10;
+        document.getElementById('GB_value_row10').innerHTML = finalvalue_row10;
+
+        // Row Answer 
+        var nodes_value_row_answer = nodes_value_slider_row1 + nodes_value_slider_row2 + nodes_value_slider_row3 + nodes_value_slider_row4 + nodes_value_slider_row5 + nodes_value_slider_row6 + nodes_value_slider_row7 + nodes_value_slider_row8 + nodes_value_slider_row9 + nodes_value_slider_row10;
+
+        nodes_value_row_answer = nodes_value_row_answer.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+
+        var finalvalue_row_answer = finalvalue_row1 + finalvalue_row2 + finalvalue_row3 + finalvalue_row4 + finalvalue_row5 + finalvalue_row6 + finalvalue_row7 + finalvalue_row8 + finalvalue_row9 + finalvalue_row10;
+        // finalvalue = finalvalue.toLocaleString(); comment out this bcoz not supported on safari browser
+        // .replace logic is used to stay the numbers upto certain decimal places
+
+        finalvalue_row_answer = finalvalue_row_answer.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        document.getElementById('Node_value_row_answer').innerHTML = nodes_value_row_answer;
+        document.getElementById('EPS_value_row_answer').innerHTML = finalvalue_row_answer;
+        document.getElementById('GB_value_row_answer').innerHTML = finalvalue_row_answer;
+
+
+
+        // Total gb 
+
+        // It will calculate total gb if node value is not zero  and if node value is 0 then total gb will also zero
+        if (finalvalue_row_answer != 0) {
+            var nodes_value_days = document.getElementById('nodes_value_days').value;
+            // .replace logic is used to stay the numbers upto certain decimal places
+            var final_nodes_value_gb = (nodes_value_days * nodes_value_row_answer) / 1000;
+            final_nodes_value_gb = final_nodes_value_gb.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+
+            document.getElementById('Node_value_gb').innerHTML = final_nodes_value_gb;
+        }
+        else {
+            document.getElementById('Node_value_gb').innerHTML = "0";
+        }
+    }
+
+</script>
